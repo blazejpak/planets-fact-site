@@ -1,7 +1,10 @@
-import React from "react";
+import data from "../data/data.json";
+import PlanetInfo from "../components/PlanetInfo";
 
 const VenusPage = () => {
-  return <div>VenusPage</div>;
+  const dataPlanet = data.find((data) => data.name.toLowerCase() === "venus");
+
+  return <PlanetInfo data={dataPlanet} />;
 };
 
 export default VenusPage;
