@@ -2,9 +2,13 @@ import data from "../data/data.json";
 import PlanetInfo from "../components/PlanetInfo";
 
 const VenusPage = () => {
-  const dataPlanet = data.find((data) => data.name.toLowerCase() === "venus");
+  const dataPlanet = data.find((data) => data.name.toLowerCase() === "earth");
 
-  return <PlanetInfo data={dataPlanet} />;
+  return (
+    <div>
+      <PlanetInfo data={dataPlanet} />
+    </div>
+  );
 };
 
 export default VenusPage;

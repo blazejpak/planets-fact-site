@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
-import chevron from "/src/assets/icon-chevron.svg";
-import bgSVG from "/assets/background-stars.svg";
+import chevron from "/assets/icon-chevron.svg";
+import bgSVG from "../assets/background-stars.svg";
 
 const MainNavigation = () => {
   const [isActive, setIsActive] = useState(false);
@@ -33,7 +33,7 @@ const MainNavigation = () => {
       <nav
         className={
           isActive
-            ? ` h-full fixed bg-[#070724] w-full `
+            ? ` h-full fixed bg-[#070724] w-full z-10 `
             : "hidden md:flex xl:mr-10 xl:h-full"
         }
       >

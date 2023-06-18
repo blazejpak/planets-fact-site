@@ -1,7 +1,14 @@
-import React from "react";
+import PlanetInfo from "../components/PlanetInfo";
+import data from "../data/data.json";
 
 const JupiterPage = () => {
-  return <div>JupiterPage</div>;
+  const dataPlanet = data.find((data) => data.name.toLowerCase() === "jupiter");
+
+  return (
+    <div>
+      <PlanetInfo data={dataPlanet} />
+    </div>
+  );
 };
 
 export default JupiterPage;
