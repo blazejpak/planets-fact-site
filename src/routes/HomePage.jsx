@@ -3,15 +3,13 @@ import data from "../data/data.json";
 
 const HomePage = () => {
   const dataPlanet = data.find((data) => data.name.toLowerCase() === "mercury");
+  const color = "#419EBB";
   // console.log(arrNrPlanet);
   // // const {geology,images,name,overiview}
 
-  console.log(dataPlanet);
-
   return (
     <div>
-      <h1>Changed</h1>
-      <PlanetInfo data={dataPlanet} />
+      <PlanetInfo data={dataPlanet} colorContentactive={color} />
     </div>
   );
 };

@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
-import chevron from "../assets/icon-chevron.svg";
+import chevron from "/src/assets/icon-chevron.svg";
+import bgSVG from "/assets/background-stars.svg";
 
 const MainNavigation = () => {
   const [isActive, setIsActive] = useState(false);
@@ -10,11 +11,14 @@ const MainNavigation = () => {
     setIsActive((currState) => !currState);
   };
 
-  const linkStyle =
-    "relative xl:h-full xl:flex xl:justify-center xl:items-center xl:active:before:absolute xl:active:before:top-0 xl:active:before:h-[1px] xl:active:before:w-full xl:active:before:bg-[#419EBB] xl:focus:before:absolute xl:focus:before:top-0 xl:focus:before:h-[1px] xl:focus:before:w-full xl:focus:before:bg-[#419EBB]";
+  const activeLinkStyle =
+    "relative xl:h-full xl:flex xl:justify-center xl:items-center xl:before:absolute xl:before:top-0 xl:before:h-[1px] xl:before:w-full xl:before:bg-[#419EBB] ";
+
+  const notActiveLinkStyle =
+    "relative xl:h-full xl:flex xl:justify-center xl:items-center ";
 
   return (
-    <header className=" w-full  bg-[#070724] text-[#FFFFFF] md:h-40 md:flex md:flex-col md:border-white/20  md:border-b-[1px] md:justify-center md:items-center md:gap-10 xl:flex-row xl:h-20 xl:justify-between">
+    <header className=" w-full   text-[#FFFFFF] md:h-40 md:flex md:flex-col md:border-white/20  md:border-b-[1px] md:justify-center md:items-center md:gap-10 xl:flex-row xl:h-20 xl:justify-between">
       <div className="flex justify-between items-center mx-6  h-16 md:h-fit md:pt-8 xl:pt-0 xl:ml-8 xl:mx-0">
         <h2 className="text-[28px] font-['Antonio']">THE PLANETS</h2>
         <div
@@ -24,7 +28,7 @@ const MainNavigation = () => {
           <div className=" caret-transparent w-6 h-[3px] relative bg-white before:absolute before:w-6 before:h-[3px] before:bg-white before:top-[7px] after:bottom-[7px] after:absolute after:w-6 after:h-[3px] after:bg-white"></div>
         </div>
       </div>
-      <div className="border border-white opacity-20 md:hidden"></div>
+      <div className="border-b border-white opacity-20 md:hidden"></div>
 
       <nav
         className={
@@ -43,7 +47,9 @@ const MainNavigation = () => {
           <NavLink
             to="/"
             onClick={() => setIsActive(false)}
-            className={linkStyle}
+            className={({ isActive }) =>
+              isActive ? activeLinkStyle : notActiveLinkStyle
+            }
           >
             <li className="py-5 pl-6 pr-8 md:p-0 ">
               <div className="flex justify-between items-center">
@@ -60,7 +66,9 @@ const MainNavigation = () => {
           <NavLink
             to="/venus"
             onClick={() => setIsActive(false)}
-            className={linkStyle}
+            className={({ isActive }) =>
+              isActive ? activeLinkStyle : notActiveLinkStyle
+            }
           >
             <li className="py-5 pl-6 pr-8 md:p-0 ">
               <div className="flex justify-between items-center">
@@ -77,7 +85,9 @@ const MainNavigation = () => {
           <NavLink
             to="/earth"
             onClick={() => setIsActive(false)}
-            className={linkStyle}
+            className={({ isActive }) =>
+              isActive ? activeLinkStyle : notActiveLinkStyle
+            }
           >
             <li className="py-5 pl-6 pr-8 md:p-0 ">
               <div className="flex justify-between items-center">
@@ -94,7 +104,9 @@ const MainNavigation = () => {
           <NavLink
             to="/mars"
             onClick={() => setIsActive(false)}
-            className={linkStyle}
+            className={({ isActive }) =>
+              isActive ? activeLinkStyle : notActiveLinkStyle
+            }
           >
             <li className="py-5 pl-6 pr-8 md:p-0 ">
               <div className="flex justify-between items-center">
@@ -111,7 +123,9 @@ const MainNavigation = () => {
           <NavLink
             to="/jupiter"
             onClick={() => setIsActive(false)}
-            className={linkStyle}
+            className={({ isActive }) =>
+              isActive ? activeLinkStyle : notActiveLinkStyle
+            }
           >
             <li className="py-5 pl-6 pr-8 md:p-0 ">
               <div className="flex justify-between items-center">
@@ -128,7 +142,9 @@ const MainNavigation = () => {
           <NavLink
             to="/saturn"
             onClick={() => setIsActive(false)}
-            className={linkStyle}
+            className={({ isActive }) =>
+              isActive ? activeLinkStyle : notActiveLinkStyle
+            }
           >
             <li className="py-5 pl-6 pr-8 md:p-0 ">
               <div className="flex justify-between items-center">
@@ -145,7 +161,9 @@ const MainNavigation = () => {
           <NavLink
             to="/uranus"
             onClick={() => setIsActive(false)}
-            className={linkStyle}
+            className={({ isActive }) =>
+              isActive ? activeLinkStyle : notActiveLinkStyle
+            }
           >
             <li className="py-5 pl-6 pr-8 md:p-0 ">
               <div className="flex justify-between items-center">
@@ -162,7 +180,9 @@ const MainNavigation = () => {
           <NavLink
             to="neptune"
             onClick={() => setIsActive(false)}
-            className={linkStyle}
+            className={({ isActive }) =>
+              isActive ? activeLinkStyle : notActiveLinkStyle
+            }
           >
             <li className="py-5 pl-6 pr-8 md:p-0 ">
               <div className="flex justify-between items-center">
