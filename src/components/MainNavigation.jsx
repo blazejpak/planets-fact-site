@@ -12,7 +12,7 @@ const MainNavigation = () => {
   };
 
   const activeLinkStyle =
-    "relative xl:h-full xl:flex xl:justify-center xl:items-center xl:before:absolute xl:before:top-0 xl:before:h-[1px] xl:before:w-full xl:before:bg-[#419EBB] ";
+    "relative xl:h-full xl:flex xl:justify-center xl:items-center xl:before:absolute xl:before:top-0 xl:before:h-1 xl:before:w-full xl:before:bg-[#419EBB] ";
 
   const notActiveLinkStyle =
     "relative xl:h-full xl:flex xl:justify-center xl:items-center ";
@@ -55,7 +55,7 @@ const MainNavigation = () => {
               <div className="flex justify-between items-center">
                 <div className="flex items-center gap-6">
                   <div className="h-5 w-5 bg-[#DEF4FC] rounded-full md:hidden"></div>
-                  <h3 className="text-[15px] font-bold uppercase md:text-xs">
+                  <h3 className="text-[15px] font-bold uppercase md:text-[11px]">
                     Mercury
                   </h3>
                 </div>
@@ -74,7 +74,7 @@ const MainNavigation = () => {
               <div className="flex justify-between items-center">
                 <div className="flex items-center gap-6">
                   <div className="h-5 w-5 bg-[#F7CC7F] rounded-full md:hidden"></div>
-                  <h3 className="text-[15px] font-bold uppercase md:text-xs">
+                  <h3 className="text-[15px] font-bold uppercase md:text-[11px]">
                     Venus
                   </h3>
                 </div>
@@ -93,7 +93,7 @@ const MainNavigation = () => {
               <div className="flex justify-between items-center">
                 <div className="flex items-center gap-6">
                   <div className="h-5 w-5 bg-[#545BFE] rounded-full md:hidden"></div>
-                  <h3 className="text-[15px] font-bold uppercase md:text-xs">
+                  <h3 className="text-[15px] font-bold uppercase md:text-[11px]">
                     Earth
                   </h3>
                 </div>
@@ -112,7 +112,7 @@ const MainNavigation = () => {
               <div className="flex justify-between items-center">
                 <div className="flex items-center gap-6">
                   <div className="h-5 w-5 bg-[#FF6A45] rounded-full md:hidden"></div>
-                  <h3 className="text-[15px] font-bold uppercase md:text-xs">
+                  <h3 className="text-[15px] font-bold uppercase md:text-[11px]">
                     Mars
                   </h3>
                 </div>
@@ -131,7 +131,7 @@ const MainNavigation = () => {
               <div className="flex justify-between items-center">
                 <div className="flex items-center gap-6">
                   <div className="h-5 w-5 bg-[#ECAD7A] rounded-full md:hidden"></div>
-                  <h3 className="text-[15px] font-bold uppercase md:text-xs">
+                  <h3 className="text-[15px] font-bold uppercase md:text-[11px]">
                     Jupiter
                   </h3>
                 </div>
@@ -150,7 +150,7 @@ const MainNavigation = () => {
               <div className="flex justify-between items-center">
                 <div className="flex items-center gap-6">
                   <div className="h-5 w-5 bg-[#FCCB6B] rounded-full md:hidden"></div>
-                  <h3 className="text-[15px] font-bold uppercase md:text-xs">
+                  <h3 className="text-[15px] font-bold uppercase md:text-[11px]">
                     Saturn
                   </h3>
                 </div>
@@ -169,7 +169,7 @@ const MainNavigation = () => {
               <div className="flex justify-between items-center">
                 <div className="flex items-center gap-6">
                   <div className="h-5 w-5 bg-[#65F0D5] rounded-full md:hidden"></div>
-                  <h3 className="text-[15px] font-bold uppercase md:text-xs">
+                  <h3 className="text-[15px] font-bold uppercase md:text-[11px]">
                     Uranus
                   </h3>
                 </div>
@@ -188,7 +188,7 @@ const MainNavigation = () => {
               <div className="flex justify-between items-center">
                 <div className="flex items-center gap-6">
                   <div className="h-5 w-5 bg-[#497EFA] rounded-full md:hidden"></div>
-                  <h3 className="text-[15px] font-bold uppercase md:text-xs">
+                  <h3 className="text-[15px] font-bold uppercase md:text-[11px]">
                     Neptune
                   </h3>
                 </div>
