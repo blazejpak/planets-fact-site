@@ -44,14 +44,14 @@ const MainNavigation = () => {
               : "md:flex md:mt-0 md:divide-none md:gap-[33px] font-['Spartan league'] tracking-[1.37px]  "
           }
         >
-          <NavLink
-            to="/"
-            onClick={() => setIsActive(false)}
-            className={({ isActive }) =>
-              isActive ? activeLinkStyle : notActiveLinkStyle
-            }
-          >
-            <li className="py-5 pl-6 pr-8 md:p-0 ">
+          <li className="py-5 pl-6 pr-8 md:p-0 ">
+            <NavLink
+              to="/"
+              onClick={() => setIsActive(false)}
+              className={({ isActive }) =>
+                isActive ? activeLinkStyle : notActiveLinkStyle
+              }
+            >
               <div className="flex justify-between items-center">
                 <div className="flex items-center gap-6">
                   <div className="h-5 w-5 bg-[#DEF4FC] rounded-full md:hidden"></div>
@@ -61,16 +61,16 @@ const MainNavigation = () => {
                 </div>
                 <img src={chevron} className="h-2 w-1 md:hidden" />
               </div>
-            </li>
-          </NavLink>
-          <NavLink
-            to="/venus"
-            onClick={() => setIsActive(false)}
-            className={({ isActive }) =>
-              isActive ? activeLinkStyle : notActiveLinkStyle
-            }
-          >
-            <li className="py-5 pl-6 pr-8 md:p-0 ">
+            </NavLink>
+          </li>
+          <li className="py-5 pl-6 pr-8 md:p-0 ">
+            <NavLink
+              to="/venus"
+              onClick={() => setIsActive(false)}
+              className={({ isActive }) =>
+                isActive ? activeLinkStyle : notActiveLinkStyle
+              }
+            >
               <div className="flex justify-between items-center">
                 <div className="flex items-center gap-6">
                   <div className="h-5 w-5 bg-[#F7CC7F] rounded-full md:hidden"></div>
@@ -80,16 +80,16 @@ const MainNavigation = () => {
                 </div>
                 <img src={chevron} className="h-2 w-1 md:hidden" />
               </div>
-            </li>
-          </NavLink>
-          <NavLink
-            to="/earth"
-            onClick={() => setIsActive(false)}
-            className={({ isActive }) =>
-              isActive ? activeLinkStyle : notActiveLinkStyle
-            }
-          >
-            <li className="py-5 pl-6 pr-8 md:p-0 ">
+            </NavLink>
+          </li>
+          <li className="py-5 pl-6 pr-8 md:p-0 ">
+            <NavLink
+              to="/earth"
+              onClick={() => setIsActive(false)}
+              className={({ isActive }) =>
+                isActive ? activeLinkStyle : notActiveLinkStyle
+              }
+            >
               <div className="flex justify-between items-center">
                 <div className="flex items-center gap-6">
                   <div className="h-5 w-5 bg-[#545BFE] rounded-full md:hidden"></div>
@@ -99,16 +99,16 @@ const MainNavigation = () => {
                 </div>
                 <img src={chevron} className="h-2 w-1 md:hidden" />
               </div>
-            </li>
-          </NavLink>
-          <NavLink
-            to="/mars"
-            onClick={() => setIsActive(false)}
-            className={({ isActive }) =>
-              isActive ? activeLinkStyle : notActiveLinkStyle
-            }
-          >
-            <li className="py-5 pl-6 pr-8 md:p-0 ">
+            </NavLink>
+          </li>
+          <li className="py-5 pl-6 pr-8 md:p-0 ">
+            <NavLink
+              to="/mars"
+              onClick={() => setIsActive(false)}
+              className={({ isActive }) =>
+                isActive ? activeLinkStyle : notActiveLinkStyle
+              }
+            >
               <div className="flex justify-between items-center">
                 <div className="flex items-center gap-6">
                   <div className="h-5 w-5 bg-[#FF6A45] rounded-full md:hidden"></div>
@@ -118,16 +118,16 @@ const MainNavigation = () => {
                 </div>
                 <img src={chevron} className="h-2 w-1 md:hidden" />
               </div>
-            </li>
-          </NavLink>
-          <NavLink
-            to="/jupiter"
-            onClick={() => setIsActive(false)}
-            className={({ isActive }) =>
-              isActive ? activeLinkStyle : notActiveLinkStyle
-            }
-          >
-            <li className="py-5 pl-6 pr-8 md:p-0 ">
+            </NavLink>
+          </li>
+          <li className="py-5 pl-6 pr-8 md:p-0 ">
+            <NavLink
+              to="/jupiter"
+              onClick={() => setIsActive(false)}
+              className={({ isActive }) =>
+                isActive ? activeLinkStyle : notActiveLinkStyle
+              }
+            >
               <div className="flex justify-between items-center">
                 <div className="flex items-center gap-6">
                   <div className="h-5 w-5 bg-[#ECAD7A] rounded-full md:hidden"></div>
@@ -137,16 +137,16 @@ const MainNavigation = () => {
                 </div>
                 <img src={chevron} className="h-2 w-1 md:hidden" />
               </div>
-            </li>
-          </NavLink>
-          <NavLink
-            to="/saturn"
-            onClick={() => setIsActive(false)}
-            className={({ isActive }) =>
-              isActive ? activeLinkStyle : notActiveLinkStyle
-            }
-          >
-            <li className="py-5 pl-6 pr-8 md:p-0 ">
+            </NavLink>
+          </li>
+          <li className="py-5 pl-6 pr-8 md:p-0 ">
+            <NavLink
+              to="/saturn"
+              onClick={() => setIsActive(false)}
+              className={({ isActive }) =>
+                isActive ? activeLinkStyle : notActiveLinkStyle
+              }
+            >
               <div className="flex justify-between items-center">
                 <div className="flex items-center gap-6">
                   <div className="h-5 w-5 bg-[#FCCB6B] rounded-full md:hidden"></div>
@@ -156,16 +156,16 @@ const MainNavigation = () => {
                 </div>
                 <img src={chevron} className="h-2 w-1 md:hidden" />
               </div>
-            </li>
-          </NavLink>
-          <NavLink
-            to="/uranus"
-            onClick={() => setIsActive(false)}
-            className={({ isActive }) =>
-              isActive ? activeLinkStyle : notActiveLinkStyle
-            }
-          >
-            <li className="py-5 pl-6 pr-8 md:p-0 ">
+            </NavLink>
+          </li>
+          <li className="py-5 pl-6 pr-8 md:p-0 ">
+            <NavLink
+              to="/uranus"
+              onClick={() => setIsActive(false)}
+              className={({ isActive }) =>
+                isActive ? activeLinkStyle : notActiveLinkStyle
+              }
+            >
               <div className="flex justify-between items-center">
                 <div className="flex items-center gap-6">
                   <div className="h-5 w-5 bg-[#65F0D5] rounded-full md:hidden"></div>
@@ -175,16 +175,16 @@ const MainNavigation = () => {
                 </div>
                 <img src={chevron} className="h-2 w-1 md:hidden" />
               </div>
-            </li>
-          </NavLink>
-          <NavLink
-            to="neptune"
-            onClick={() => setIsActive(false)}
-            className={({ isActive }) =>
-              isActive ? activeLinkStyle : notActiveLinkStyle
-            }
-          >
-            <li className="py-5 pl-6 pr-8 md:p-0 ">
+            </NavLink>
+          </li>
+          <li className="py-5 pl-6 pr-8 md:p-0 ">
+            <NavLink
+              to="neptune"
+              onClick={() => setIsActive(false)}
+              className={({ isActive }) =>
+                isActive ? activeLinkStyle : notActiveLinkStyle
+              }
+            >
               <div className="flex justify-between items-center">
                 <div className="flex items-center gap-6">
                   <div className="h-5 w-5 bg-[#497EFA] rounded-full md:hidden"></div>
@@ -194,8 +194,8 @@ const MainNavigation = () => {
                 </div>
                 <img src={chevron} className="h-2 w-1 md:hidden" />
               </div>
-            </li>
-          </NavLink>
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </header>

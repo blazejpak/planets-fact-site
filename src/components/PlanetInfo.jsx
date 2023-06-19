@@ -92,11 +92,13 @@ const PlanetInfo = ({ data, color }) => {
             <img
               src={`.${sourcePlanet}`}
               className="md:h-[184px] md:w-[184px] h-[111px] w-[111px] xl:h-[290px] xl:w-[290px]"
+              alt="Planet"
             />
             {planetContentActive === "surface" && (
               <img
                 src={data.images.geology}
                 className="absolute top-24 md:top-40 xl:top-64 xl:h-[160px] xl:w-[128px] md:h-[120px] md:w-[96px] h-[80px] w-[65px] translate-y-[-20%]"
+                alt="Internal planet"
               />
             )}
           </motion.div>
