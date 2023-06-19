@@ -6,7 +6,7 @@ const HomePage = () => {
 
   return (
     <div>
-      <PlanetInfo data={dataPlanet} />
+      <PlanetInfo data={dataPlanet} color="#419EBB" />
     </div>
   );
 };

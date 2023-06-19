@@ -5,7 +5,7 @@ const NeptunePage = () => {
   const dataPlanet = data.find((data) => data.name.toLowerCase() === "neptune");
   return (
     <div>
-      <PlanetInfo data={dataPlanet} />
+      <PlanetInfo data={dataPlanet} color="neptune" />
     </div>
   );
 };

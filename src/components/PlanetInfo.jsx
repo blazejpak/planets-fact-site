@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Source from "../../public/assets/icon-source.svg";
 
+import ErrorPage from "../routes/ErrorPage";
+
 import { motion } from "framer-motion";
 
-const PlanetInfo = ({ data }) => {
+const PlanetInfo = ({ data, color }) => {
   const [planetContentActive, setPlanetContentActive] = useState("overview");
 
   let sourcePlanet;
@@ -39,9 +41,9 @@ const PlanetInfo = ({ data }) => {
         <div
           onClick={() => setPlanetContentActive("structure")}
           className={`relative
-            ${
-              planetContentActive === "structure" ? "underline" : ""
-            } cursor-pointer h-full flex justify-center items-center`}
+              ${
+                planetContentActive === "structure" ? "underline" : ""
+              } cursor-pointer h-full flex justify-center items-center`}
         >
           <h2>structure</h2>
         </div>
@@ -49,9 +51,9 @@ const PlanetInfo = ({ data }) => {
         <div
           onClick={() => setPlanetContentActive("surface")}
           className={`relative
-            ${
-              planetContentActive === "surface" ? "underline" : ""
-            }   cursor-pointer h-full flex justify-center items-center`}
+              ${
+                planetContentActive === "surface" ? "underline" : ""
+              }   cursor-pointer h-full flex justify-center items-center`}
         >
           <h2>surface</h2>
         </div>
@@ -61,8 +63,10 @@ const PlanetInfo = ({ data }) => {
       <div className=" my-24 flex justify-center items-center">
         <motion.div
           className="flex flex-col justify-center items-center"
-          animate={{ rotate: 360 }}
-          transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
+          whileHover={{
+            rotate: 360,
+            transition: { repeat: Infinity, duration: 5, ease: "linear" },
+          }}
         >
           <img
             src={`.${sourcePlanet}`}
@@ -102,7 +106,7 @@ const PlanetInfo = ({ data }) => {
             <div
               onClick={() => setPlanetContentActive("overview")}
               className={`${
-                planetContentActive === "overview" ? `bg-[#419EBB]` : ""
+                planetContentActive === "overview" ? `bg-${color}` : ""
               } cursor-pointer h-full flex justify-start items-center border border-white/20 w-72 gap-3 pl-5 py-2`}
             >
               <p className="opacity-50 font-bold font-[Spartan League]">01</p>
