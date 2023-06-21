@@ -85,7 +85,11 @@ const MainNavigation = () => {
                     Venus
                   </h3>
                 </div>
-                <img src={chevron} className="h-2 w-1 md:hidden" />
+                <img
+                  alt="Chevron Icon"
+                  src={chevron}
+                  className="h-2 w-1 md:hidden"
+                />
               </div>
             </NavLink>
           </li>
@@ -106,7 +110,11 @@ const MainNavigation = () => {
                     Earth
                   </h3>
                 </div>
-                <img src={chevron} className="h-2 w-1 md:hidden" />
+                <img
+                  alt="Chevron Icon"
+                  src={chevron}
+                  className="h-2 w-1 md:hidden"
+                />
               </div>
             </NavLink>
           </li>
@@ -127,7 +135,11 @@ const MainNavigation = () => {
                     Mars
                   </h3>
                 </div>
-                <img src={chevron} className="h-2 w-1 md:hidden" />
+                <img
+                  alt="Chevron Icon"
+                  src={chevron}
+                  className="h-2 w-1 md:hidden"
+                />
               </div>
             </NavLink>
           </li>
@@ -148,7 +160,11 @@ const MainNavigation = () => {
                     Jupiter
                   </h3>
                 </div>
-                <img src={chevron} className="h-2 w-1 md:hidden" />
+                <img
+                  alt="Chevron Icon"
+                  src={chevron}
+                  className="h-2 w-1 md:hidden"
+                />
               </div>
             </NavLink>
           </li>
@@ -169,7 +185,11 @@ const MainNavigation = () => {
                     Saturn
                   </h3>
                 </div>
-                <img src={chevron} className="h-2 w-1 md:hidden" />
+                <img
+                  alt="Chevron Icon"
+                  src={chevron}
+                  className="h-2 w-1 md:hidden"
+                />
               </div>
             </NavLink>
           </li>
@@ -190,7 +210,11 @@ const MainNavigation = () => {
                     Uranus
                   </h3>
                 </div>
-                <img src={chevron} className="h-2 w-1 md:hidden" />
+                <img
+                  alt="Chevron Icon"
+                  src={chevron}
+                  className="h-2 w-1 md:hidden"
+                />
               </div>
             </NavLink>
           </li>
@@ -211,7 +235,11 @@ const MainNavigation = () => {
                     Neptune
                   </h3>
                 </div>
-                <img src={chevron} className="h-2 w-1 md:hidden" />
+                <img
+                  alt="Chevron Icon"
+                  src={chevron}
+                  className="h-2 w-1 md:hidden"
+                />
               </div>
             </NavLink>
           </li>
