@@ -97,7 +97,7 @@ const PlanetInfo = ({ data, planet }) => {
       </div>
 
       {/* wrap images, content and links */}
-      <div className="flex flex-col items-center justify-center xl:grid xl:grid-cols-3 xl:mb-20 xl:mt-20">
+      <div className="flex flex-col items-center justify-center xl:grid xl:grid-cols-3  xl:mt-20">
         {/* Images */}
         <div className=" my-24 flex justify-center items-center xl:col-start-1 xl:col-end-3">
           <motion.div
@@ -128,10 +128,10 @@ const PlanetInfo = ({ data, planet }) => {
             <h1 className="text-[40px] font-[Antonio] uppercase xl:text-[80px] md:text-[48px]">
               {data.name}
             </h1>
-            <p className="text-[11px] xl:text-[14px] md:text-left md:mx-0 text-center leading-6 xl:mb-4">
+            <p className="text-[11px] xl:text-[14px] md:text-left md:mx-0 text-center leading-6 xl:mb-4 xl:leading-6">
               {contentText}
             </p>
-            <div className="flex gap-1 justify-center items-center opacity-50 text-xs mb-7 xl:text-sm">
+            <div className="flex gap-1 justify-center items-center opacity-50 text-xs mb-7 xl:text-sm xl:mb-10">
               <p className="font-['League Spartan']">Source :</p>
               <a
                 href={contentSource}
