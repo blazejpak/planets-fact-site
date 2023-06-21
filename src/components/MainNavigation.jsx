@@ -45,7 +45,7 @@ const MainNavigation = () => {
         >
           <li className="py-5 pl-6 pr-8 md:p-0 ">
             <NavLink
-              to="/"
+              to="/mercury"
               onClick={() => setIsActive(false)}
               className={({ isActive }) =>
                 isActive
@@ -95,7 +95,7 @@ const MainNavigation = () => {
           </li>
           <li className="py-5 pl-6 pr-8 md:p-0 ">
             <NavLink
-              to="/earth"
+              to="/"
               onClick={() => setIsActive(false)}
               className={({ isActive }) =>
                 isActive
