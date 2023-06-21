@@ -97,7 +97,7 @@ const PlanetInfo = ({ data, planet }) => {
       </div>
 
       {/* wrap images, content and links */}
-      <div className="flex flex-col items-center justify-center xl:grid xl:grid-cols-3  xl:mt-20">
+      <div className="flex flex-col items-center justify-center xl:grid xl:grid-cols-3 xl:mb-10  xl:mt-20">
         {/* Images */}
         <div className=" my-24 flex justify-center items-center xl:col-start-1 xl:col-end-3">
           <motion.div
