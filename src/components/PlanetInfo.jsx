@@ -5,7 +5,7 @@ import ErrorPage from "../routes/ErrorPage";
 
 import { motion } from "framer-motion";
 
-const PlanetInfo = ({ data, color }) => {
+const PlanetInfo = ({ data, planet }) => {
   const colorButtons = {
     mercury: "bg-[#419EBB]",
     earth: "bg-[#6D2ED5]",
@@ -15,6 +15,24 @@ const PlanetInfo = ({ data, color }) => {
     uranus: "bg-[#1EC1A2]",
     venus: "bg-[#EDA249]",
     saturn: "bg-[#CD5120]",
+  };
+
+  const planetSize = {
+    mercury:
+      "h-[111px] w-[111px] md:h-[184px] md:w-[184px] xl:h-[290px] xl:w-[290px]",
+    earth:
+      "h-[173px] w-[173px] md:h-[285px] md:w-[285px] xl:h-[450px] xl:w-[450px]",
+    jupiter:
+      "h-[224px] w-[224px] md:h-[369px] md:w-[369px] xl:h-[582px] xl:w-[582px]",
+    mars: "h-[129px] w-[129px] md:h-[213px] md:w-[213px] xl:h-[336px] xl:w-[336px]",
+    neptune:
+      "h-[173px] w-[173px] md:h-[285px] md:w-[285px] xl:h-[450px] xl:w-[450px]",
+    uranus:
+      "h-[176px] w-[176px] md:h-[290px] md:w-[290px] xl:h-[458px] xl:w-[458px]",
+    venus:
+      "h-[154px] w-[154px] md:h-[253px] md:w-[253px] xl:h-[400px] xl:w-[400px]",
+    saturn:
+      "h-[256px] w-[256px] md:h-[422px] md:w-[422px] xl:h-[660px] xl:w-[660px]",
   };
 
   const [planetContentActive, setPlanetContentActive] = useState("overview");
@@ -37,7 +55,7 @@ const PlanetInfo = ({ data, color }) => {
     contentSource = data.structure.source;
   else contentSource = data.geology.source;
 
-  const contentActive = `before:absolute  before:bottom-0 before:h-[4px] before:w-full before:${colorButtons[color]}`;
+  const contentActive = `before:absolute  before:bottom-0 before:h-[4px] before:w-full before:${colorButtons[planet]}`;
 
   return (
     <main>
@@ -47,7 +65,7 @@ const PlanetInfo = ({ data, color }) => {
           onClick={() => setPlanetContentActive("overview")}
           className={`relative ${
             planetContentActive === "overview"
-              ? ` ${colorButtons[color]} bg-opacity-20`
+              ? ` ${colorButtons[planet]} bg-opacity-20`
               : ""
           } cursor-pointer h-full flex justify-center items-center px-2`}
         >
@@ -58,7 +76,7 @@ const PlanetInfo = ({ data, color }) => {
           className={`relative
               ${
                 planetContentActive === "structure"
-                  ? ` ${colorButtons[color]} bg-opacity-20`
+                  ? ` ${colorButtons[planet]} bg-opacity-20`
                   : ""
               } cursor-pointer h-full flex justify-center items-center px-2`}
         >
@@ -70,7 +88,7 @@ const PlanetInfo = ({ data, color }) => {
           className={`relative
               ${
                 planetContentActive === "surface"
-                  ? ` ${colorButtons[color]} bg-opacity-20`
+                  ? ` ${colorButtons[planet]} bg-opacity-20`
                   : ""
               }   cursor-pointer h-full flex justify-center items-center px-2`}
         >
@@ -91,7 +109,7 @@ const PlanetInfo = ({ data, color }) => {
           >
             <img
               src={`.${sourcePlanet}`}
-              className="md:h-[184px] md:w-[184px] h-[111px] w-[111px] xl:h-[290px] xl:w-[290px]"
+              className={planetSize[planet]}
               alt="Planet"
             />
             {planetContentActive === "surface" && (
@@ -104,7 +122,7 @@ const PlanetInfo = ({ data, color }) => {
           </motion.div>
         </div>
         {/* wrap content planets and links */}
-        <div className="flex  items-center justify-center mx-10 md:gap-16 xl:flex-col xl:mx-0 xl:w-[350px] xl:col-auto xl:gap-0">
+        <div className="flex items-center  justify-center mx-10 md:gap-16 xl:flex-col xl:mx-0 xl:w-[350px] xl:col-auto xl:gap-0 xl:self-start">
           {/* Content about planets */}
           <div className="flex md:items-start flex-col gap-6 justify-center items-center xl:gap-1">
             <h1 className="text-[40px] font-[Antonio] uppercase xl:text-[80px] md:text-[48px]">
@@ -120,22 +138,22 @@ const PlanetInfo = ({ data, color }) => {
                 className="underline font-bold flex items-center gap-1"
               >
                 Wikipedia
-                <img src={Source} className="h-3 w-3" />
+                <img alt="Source icon" src={Source} className="h-3 w-3" />
               </a>
             </div>
           </div>
           {/* Links to min medium screens */}
           <div className="flex items-start justify-center xl:flex-col ">
             <div
-              className={`hidden md:flex md:flex-col font-['Spartan League'] tracking-[2px] font-bold text-[9px] h-[50px] md:h-full uppercase xl:gap-4`}
+              className={`hidden md:gap-4 md:flex md:flex-col font-['Spartan League'] tracking-[2px] font-bold text-[9px] h-[50px] md:h-full uppercase xl:gap-4`}
             >
               <div
                 onClick={() => setPlanetContentActive("overview")}
                 className={`${
                   planetContentActive === "overview"
-                    ? `${colorButtons[color]}`
-                    : `hover:${colorButtons[color]}`
-                } cursor-pointer h-full flex justify-start items-center border border-white/20 w-72 gap-3 pl-5 py-2  xl:w-[350px] xl:h-[48px] hover:bg-[#D8D8D8]/20 `}
+                    ? `${colorButtons[planet]}`
+                    : `hover:${colorButtons[planet]}`
+                } cursor-pointer h-full flex justify-start items-center border border-white/20 w-72 gap-3 pl-5 py-2 md:h-10  xl:w-[350px] xl:h-[48px] hover:bg-[#D8D8D8]/20 `}
               >
                 <p className="opacity-50 font-bold font-[Spartan League]">01</p>
                 <h2>overview</h2>
@@ -144,9 +162,9 @@ const PlanetInfo = ({ data, color }) => {
                 onClick={() => setPlanetContentActive("structure")}
                 className={`${
                   planetContentActive === "structure"
-                    ? `${colorButtons[color]}`
-                    : `hover:${colorButtons[color]}`
-                } cursor-pointer h-full flex justify-start items-center border border-white/20 w-72 gap-3 pl-5 py-2  xl:w-[350px] xl:h-[48px] hover:bg-[#D8D8D8]/20  `}
+                    ? `${colorButtons[planet]}`
+                    : `hover:${colorButtons[planet]}`
+                } cursor-pointer h-full flex justify-start items-center border border-white/20 w-72 gap-3 pl-5 py-2 md:h-10  xl:w-[350px] xl:h-[48px] hover:bg-[#D8D8D8]/20  `}
               >
                 <p className="opacity-50 font-bold font-[Spartan League]">02</p>
                 <h2>internal structure</h2>
@@ -156,9 +174,9 @@ const PlanetInfo = ({ data, color }) => {
                 onClick={() => setPlanetContentActive("surface")}
                 className={` ${
                   planetContentActive === "surface"
-                    ? `${colorButtons[color]}`
-                    : `hover:${colorButtons[color]}`
-                }  cursor-pointer h-full flex justify-start items-center border border-white/20 w-72 gap-3 pl-5 py-2 xl:w-[350px] xl:h-[48px] hover:bg-[#D8D8D8]/20  `}
+                    ? `${colorButtons[planet]}`
+                    : `hover:${colorButtons[planet]}`
+                }  cursor-pointer h-full flex justify-start items-center border border-white/20 w-72 gap-3 pl-5 py-2 md:h-10 xl:w-[350px] xl:h-[48px] hover:bg-[#D8D8D8]/20  `}
               >
                 <p className="opacity-50 font-bold font-[Spartan League]">03</p>
                 <h2>surface geology</h2>

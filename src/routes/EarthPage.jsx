@@ -6,7 +6,7 @@ const EarthPage = () => {
 
   return (
     <div>
-      <PlanetInfo data={dataPlanet} color="earth" />
+      <PlanetInfo data={dataPlanet} planet="earth" />
     </div>
   );
 };

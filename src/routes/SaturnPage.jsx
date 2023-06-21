@@ -6,7 +6,7 @@ const SaturnPage = () => {
 
   return (
     <div>
-      <PlanetInfo data={dataPlanet} color="saturn" />
+      <PlanetInfo data={dataPlanet} planet="saturn" />
     </div>
   );
 };
