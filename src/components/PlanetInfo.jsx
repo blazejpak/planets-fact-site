@@ -35,6 +35,17 @@ const PlanetInfo = ({ data, planet }) => {
       "h-[256px] w-[256px] md:h-[422px] md:w-[422px] xl:h-[660px] xl:w-[660px]",
   };
 
+  const planetInsidePosition = {
+    mercury: "translate-y-[-20%]",
+    earth: "translate-y-[50%]",
+    jupiter: "translate-y-[5rem] md:translate-y-[8rem] xl:translate-y-[15rem]",
+    mars: "translate-y-[-10%]",
+    neptune: "translate-y-[40%]",
+    uranus: "translate-y-[40%]",
+    venus: "translate-y-[20%]",
+    saturn: "translate-y-[70%] xl:translate-y-[90%]",
+  };
+
   const [planetContentActive, setPlanetContentActive] = useState("overview");
 
   let sourcePlanet;
@@ -115,7 +126,7 @@ const PlanetInfo = ({ data, planet }) => {
             {planetContentActive === "surface" && (
               <img
                 src={data.images.geology}
-                className="absolute top-24 md:top-40 xl:top-64 xl:h-[160px] xl:w-[128px] md:h-[120px] md:w-[96px] h-[80px] w-[65px] translate-y-[-20%]"
+                className={`absolute top-24 md:top-40 xl:top-64 xl:h-[160px] xl:w-[128px] md:h-[120px] md:w-[96px] h-[80px] w-[65px] ${planetInsidePosition[planet]} `}
                 alt="Internal planet"
               />
             )}
@@ -186,7 +197,7 @@ const PlanetInfo = ({ data, planet }) => {
         </div>
       </div>
       {/* Number info */}
-      <div className="mx-6 flex flex-col gap-2 md:gap-6 mb-12 md:flex-row xl:justify-center xl:items-center ">
+      <div className="mx-6 flex flex-col gap-2 md:gap-6 mb-12 md:flex-row xl:justify-center xl:items-center xl:mb-14">
         <div className="border border-white/20 px-6 pt-4 pb-3 w-full xl:max-w-[250px] flex justify-between items-center md:flex-col md:items-start md:px-0 md:pl-4 xl:justify-center xl:h-[128px]  xl:gap-5 xl:pt-0 xl:pb-0">
           <h3 className="uppercase font-['Spartan league'] font-bold text-[8px] opacity-50 tracking-[0.8px] xl:text-[11px] xl:tracking-[1px] ">
             rotation time

@@ -26,7 +26,7 @@ const router = createBrowserRouter(
         errorElement={<ErrorPage />}
       />
       <Route
-        path="earth"
+        path="mercury"
         element={<MercuryPage />}
         errorElement={<ErrorPage />}
       />
