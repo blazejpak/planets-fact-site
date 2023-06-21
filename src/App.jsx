@@ -7,7 +7,7 @@ import {
 
 import HomePage from "./routes/HomePage";
 import VenusPage from "./routes/VenusPage";
-import EarthPage from "./routes/EarthPage";
+import MercuryPage from "./routes/MercuryPage";
 import MarsPage from "./routes/MarsPage";
 import JupiterPage from "./routes/JupiterPage";
 import SaturnPage from "./routes/SaturnPage";
@@ -27,7 +27,7 @@ const router = createBrowserRouter(
       />
       <Route
         path="earth"
-        element={<EarthPage />}
+        element={<MercuryPage />}
         errorElement={<ErrorPage />}
       />
       <Route path="mars" element={<MarsPage />} errorElement={<ErrorPage />} />
